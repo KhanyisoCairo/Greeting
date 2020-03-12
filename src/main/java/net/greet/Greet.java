@@ -1,7 +1,9 @@
 package net.greet;
 
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Scanner;
 
 public class Greet {
     //this will store the userName that are being greeted
@@ -13,18 +15,23 @@ public class Greet {
          }else{
              greetedUser.put(name,1);
          }
-
-         if(language == Languages.Isixhosa.toString()){
-             return "Molo, " + name;
-
-         }else if(language == Languages.English.toString()){
-             return "Hello, " + name;
-         }
-         else if(language == Languages.Afrikaans.toString()){
-
-             return "Hallo, " + name;
-         }
-       return  name + ", " + language;
+//         System.out.println(Languages.valueOf(language).getLanguage());
+//    if (){
+//
+//        return String.valueOf(Languages.valueOf(language));
+//    }
+//         if(language == Languages.Isixhosa.toString()){
+////             return "Molo, " + name;
+//                return Languages.English + name;
+//         }else if(language == Languages.English.toString()){
+//             return "Hello, " + name;
+//         }
+//         else if(language == Languages.Afrikaans.toString()){
+//
+//             return "Hallo, " + name;
+//         }
+//       return  name + ", " + language;sou
+         return  Languages.valueOf(language).getLanguage()+" "+name;
     }
 
     public Map<String, Integer> greeted() {
@@ -43,22 +50,15 @@ public class Greet {
          return greetedUser.size();
      }
 
- public void clear(){ greetedUser.clear();
+ public void clear(){
+         greetedUser.clear();
+//         greetedUser.size();
         }
-
-
-
-
-//    public static void main(String[] args) throws IOException {
-//         Greet greet = new Greet();
-//        BufferedReader standardInput = new BufferedReader(new InputStreamReader(System.in));
-//
-//        System.out.print("Enter your command: ");
-//        String name = standardInput.readLine();
-////        System.out.print("Enter your Language: ");
-//        String language = standardInput.readLine();
-//        System.out.println("===========================");
-//         System.out.println(greet.greet(name,language));
-//    }
+public void clear(String name){
+  greetedUser.containsKey(name);
+      greetedUser.remove(name);
+}
+//public void exit(){
+//}
 
 }
