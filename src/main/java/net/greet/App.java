@@ -30,17 +30,19 @@ public class App {
 //                System.exit(0);
                 System.out.println("Goodbye");
             }
+            if(command.equals("greeted")){
+                System.out.println(greet.greeted());
+            }
+
 
            try{
                if(command.equals("greet")) {
                    System.out.println(greet.greet(parts[1], parts[2]));
                }
-               if(command.equals("greeted")){
+               else if(command.equals("greeted")){
                    System.out.println(greet.greeted(parts[1]));
                }
-               if(command.equals("greeted")){
-                  System.out.println(greet.greeted());
-               }
+
 
            }
            catch (Exception e){
