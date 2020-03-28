@@ -3,28 +3,51 @@ package net.greet;
 import java.util.Scanner;
 
 public class App {
-    public static String command = "";
-    protected static String name;
-    public static String language;
+//    protected static String name;
+//    public static String language;
 
 
 
     public static void main(String[] args) {
         Greet greet = new Greet();
-        Scanner scn = new Scanner(System.in);
-        //have
+        boolean run = true;
 
-        String[] parts = command.split(" ");
+        while(run){
+            Scanner scn = new Scanner(System.in);
+            //have
+            System.out.println("Enter your Command:");
+            String comma =scn.nextLine();
+            String[] parts = comma.split(" ");
 
-        String command = parts[0];
-        String name = parts[1];
-        String language = parts[2];
+            String command = parts[0];
+//            String name = parts[1];
+//            String language = parts[2];
 
-//       if ("greet".equals(command)) {
-        String greetingMessage = greet.greet(name, language);
-        System.out.println(greetingMessage);
-//       } else if ("exit".equals())
-//    }
+//            String greetingMessage = greet.greet(name, language);
+
+            if(command.equals("exist")){
+                run = false;
+//                System.exit(0);
+                System.out.println("Goodbye");
+            }
+
+           try{
+               if(command.equals("greet")) {
+                   System.out.println(greet.greet(parts[1], parts[2]));
+               }
+               if(command.equals("greeted")){
+                   System.out.println(greet.greeted(parts[1]));
+               }
+               if(command.equals("greeted")){
+                  System.out.println(greet.greeted());
+               }
+
+           }
+           catch (Exception e){
+                System.out.println("write command");
+            }
+           }
+        }
 
 
 
@@ -42,4 +65,4 @@ public class App {
 
 
     }
-}
+

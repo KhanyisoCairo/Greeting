@@ -20,8 +20,8 @@ public class GreetTest {
         Greet greeted = new Greet();
         greeted.greet("sino", "English");
         greeted.greet("sino", "English");
-
-        assertEquals(greeted.greeted().size(), 1);
+//        System.out.println(greeted.greeted());
+        assertEquals(greeted.greeted(), "{sino=2}");
     }
 
     @Test

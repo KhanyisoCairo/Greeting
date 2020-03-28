@@ -16,8 +16,9 @@ public class Greet {
          return  Languages.valueOf(language).getLanguage()+" "+name;
     }
 
-    public Map<String, Integer> greeted() {
-        return greetedUser;
+    public String greeted() {
+
+        return String.valueOf(greetedUser);
     }
 
     public int greeted(String name){
