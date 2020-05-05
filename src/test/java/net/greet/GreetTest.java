@@ -11,10 +11,8 @@ public class GreetTest {
     void shouldgreet() {
         Greet greet = new Greet();
 //        greet.greet("cairo","Isixhosa");
-
         assertEquals(greet.greet("cairo", "Isixhosa"), "Molo cairo");
     }
-
     @Test
     void shouldGetGreeted() {
         Greet greeted = new Greet();
@@ -23,7 +21,6 @@ public class GreetTest {
 //        System.out.println(greeted.greeted());
         assertEquals(greeted.greeted(), "{sino=2}");
     }
-
     @Test
     void shouldGetGreetedUser() {
         Greet Greeted = new Greet();
@@ -34,7 +31,6 @@ public class GreetTest {
         assertEquals(Greeted.greeted("sino"), 2);
         assertEquals(Greeted.greeted("Cairo"), 1);
     }
-
     @Test
     void shouldGetCounter() {
         Greet counter = new Greet();

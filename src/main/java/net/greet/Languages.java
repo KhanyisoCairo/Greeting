@@ -5,7 +5,7 @@ public enum Languages {
     English("Hello"),
     Isixhosa("Molo");
 
-  private String language;
+  private final String language;
     Languages(String language) {
 this.language =language;
     }

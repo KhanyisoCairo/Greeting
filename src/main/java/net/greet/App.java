@@ -20,30 +20,35 @@ public class App {
             String[] parts = comma.split(" ");
 
             String command = parts[0];
-//            String name = parts[1];
-//            String language = parts[2];
-
-//            String greetingMessage = greet.greet(name, language);
-
             if(command.equals("exist")){
                 run = false;
-//                System.exit(0);
                 System.out.println("Goodbye");
             }
-            if(command.equals("greeted")){
-                System.out.println(greet.greeted());
+            if (command.equals("clear")){
+                if(parts.length == 2){
+                    if (greet.greetedUser.containsKey(greet.greeted())){
+                        greet.greetedUser.get(greet.greeted());
+                        greet.greetedUser.clear();
+                        System.out.println("list has been cleared");
+                    }else if (greet.greetedUser.containsKey(greet.greeted(parts[1]))){
+                        greet.greetedUser.clear();
+                        System.out.println("user has been cleared ");
+                    }
+                }
             }
-
 
            try{
                if(command.equals("greet")) {
                    System.out.println(greet.greet(parts[1], parts[2]));
                }
-               else if(command.equals("greeted")){
-                   System.out.println(greet.greeted(parts[1]));
+               if(command.equals("greeted")){
+                   if(parts.length == 2){
+                       System.out.println(greet.greeted(parts[1]));
+                   }
+                   else{
+                   System.out.println(greet.greeted());
                }
-
-
+               }
            }
            catch (Exception e){
                 System.out.println("write command");
