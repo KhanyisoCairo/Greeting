@@ -26,17 +26,11 @@ public class App {
             }
             if (command.equals("clear")){
                 if(parts.length == 2){
-                    if (greet.greetedUser.containsKey(greet.greeted())){
-                        greet.greetedUser.get(greet.greeted());
-                        greet.greetedUser.clear();
-                        System.out.println("list has been cleared");
-                    }else if (greet.greetedUser.containsKey(greet.greeted(parts[1]))){
-                        greet.greetedUser.clear();
-                        System.out.println("user has been cleared ");
-                    }
+                    greet.clear(parts[1]);
+                }else {
+                    greet.clear();
                 }
             }
-
            try{
                if(command.equals("greet")) {
                    System.out.println(greet.greet(parts[1], parts[2]));

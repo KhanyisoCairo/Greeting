@@ -27,7 +27,6 @@ public class Greet {
          return greetedUser.size();
      }
  public void clear(){
-
          greetedUser.clear();
         }
 public void clear(String name){
