@@ -2,6 +2,7 @@ package net.greet;
 
 import java.util.HashMap;
 
+
 public class Greet {
     //this will store the userName that are being greeted
     HashMap<String, Integer> greetedUser = new HashMap<String, Integer>();
@@ -16,7 +17,8 @@ public class Greet {
     }
 
     public String greeted() {
-        return String.valueOf(greetedUser);
+
+         return String.valueOf(greetedUser);
     }
     public int greeted(String name){
          if (greetedUser.containsKey(name)){
